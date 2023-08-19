@@ -1,62 +1,54 @@
-# RTOS_Project
-Developed an RTOS system using FreeRTOS for sender/receiver tasks with synchronized communication and timers. Analyzed performance trends, showcasing expertise in RTOS, synchronization, and data analysis.
-Certainly, here's a summary of the RTOS project and the key points you can include on your CV:
-
-**Project: Real-Time Operating System (RTOS) Implementation for Communication Tasks**
+**Project Summary: Real-Time Operating System (RTOS) Implementation for Communication Tasks**
 
 **Description:**
-- Implemented an RTOS-based system on an embedded emulation board using FreeRTOS within Eclipse CDT environment.
-- Designed a system with three tasks – two sender tasks and one receiver task – communicating through a fixed-size queue.
-- Used timers to control task sleep/wake behavior and semaphore-based synchronization.
+- Developed an RTOS-based system using FreeRTOS on an embedded emulation board within Eclipse CDT.
+- Designed sender and receiver tasks with synchronized communication using fixed-size queues.
+- Utilized timers and semaphores for efficient task coordination.
 
 **Sender Tasks:**
-- Two sender tasks operate concurrently.
-- Each sender task sleeps for a random period, Tsender, drawn from a uniform distribution.
-- Upon waking, sender tasks send a message containing the current system time to the queue.
-- If the queue is full, the sending operation fails, and a blocked message counter is incremented.
-- On successful sending, a transmitted message counter is incremented, and the sender task sleeps again.
+- Implemented concurrent sender tasks with randomized sleep periods (Tsender).
+- Sent messages to the queue upon waking, managing full queue scenarios.
+- Tracked successful transmissions and blocked messages.
 
 **Receiver Task:**
-- One receiver task sleeps for a fixed period, Treceiver.
-- Upon waking, it checks the queue for received messages.
-- If a message is present, it reads it, increments the received message counter, and sleeps again.
-- The receiver reads one message at a time, even if there are more messages in the queue.
+- Configured receiver task with fixed sleep period (Treceiver).
+- Retrieved messages from the queue and managed counters.
+- Supported single message retrieval from the queue.
 
 **Timer Callback Functions:**
-- Sender Timer Callback Function releases a semaphore to unblock the sender task, allowing it to send to the queue.
-- Receiver Timer Callback Function releases a semaphore to unblock the receiver task, which reads from the queue.
-- When the receiver receives 500 messages, the callback function triggers a "Reset" procedure.
+- Employed sender and receiver timer callbacks for task synchronization.
+- Utilized semaphores to unblock tasks at appropriate intervals.
+- Triggered "Reset" process upon receiving 500 messages.
 
 **Reset Function:**
-- Resets counters for sent, blocked, and received messages.
-- Clears the queue.
-- Updates sender timer period, Tsender, based on predefined lower and upper bound arrays.
-- If all values are used, stops execution and prints "Game Over."
+- Created reset function to reconfigure system parameters.
+- Reset counters, cleared queue, and updated sender timer period (Tsender).
+- Halted execution and displayed "Game Over" when all predefined timer values were used.
 
 **Data Analysis:**
-- Plotted the number of total sent messages as a function of the average sender timer period.
-- Analyzed the gap between the sent and received message counts during the running period.
-- Plotted the number of blocked messages against the average value of Tsender.
+- Conducted performance analysis with data visualization.
+- Plotted total sent messages vs. average sender timer period.
+- Analyzed message count disparities and blocked messages vs. average Tsender values.
 
 **Queue Size Variation:**
-- Conducted experiments with a queue of size 2 and size 20.
-- Explored the impact of queue size on system behavior and performance.
+- Explored system behavior with different queue sizes (2 and 20).
+- Investigated impact of queue size on system performance.
 
 **Efficient Random Number Generation:**
-- Efficiently generated random numbers using a uniform distribution for determining sleep periods.
+- Utilized efficient random number generation for sleep period determination.
 
 **Skills Demonstrated:**
 - Real-Time Operating System (RTOS) design and implementation using FreeRTOS.
 - Task synchronization and communication using queues and semaphores.
-- Timer-based task scheduling and control.
-- Embedded system development within Eclipse CDT.
-- Data analysis and visualization using plotting.
+- Timer-based task scheduling and control mechanisms.
+- Embedded system development with Eclipse CDT.
+- Data analysis and visualization using plotting techniques.
 
 **Conclusion:**
-- Successfully implemented an RTOS-based communication system with sender and receiver tasks using FreeRTOS.
-- Demonstrated proficiency in embedded system development, task synchronization, and performance analysis.
-  
-  **-Flow Chart**
+- Successfully executed an RTOS-based communication system using FreeRTOS.
+- Demonstrated expertise in embedded systems, synchronization, and performance analysis.
+
+**Flow Chart**
   
    ![image](https://github.com/MoustafaAhmed01/RTOS_Project/assets/104157153/3533ba46-3299-41ad-8669-e8204dd6e6a7)
 
