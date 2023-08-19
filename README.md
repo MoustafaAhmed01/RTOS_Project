@@ -55,3 +55,6 @@ Certainly, here's a summary of the RTOS project and the key points you can inclu
 **Conclusion:**
 - Successfully implemented an RTOS-based communication system with sender and receiver tasks using FreeRTOS.
 - Demonstrated proficiency in embedded system development, task synchronization, and performance analysis.
+  **Flow Chart**
+   ![image](https://github.com/MoustafaAhmed01/RTOS_Project/assets/104157153/3533ba46-3299-41ad-8669-e8204dd6e6a7)
+
